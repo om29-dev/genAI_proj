@@ -26,10 +26,8 @@ jobs:
     - name: Setup Python venv and install dependencies
       run: |
         python -m venv .venv
-        .venv/Scripts/activate
         pip install -r requirements.txt
     - name: Run backend
       run: |
-        .venv/Scripts/activate
         cd backend
         uvicorn main:app --reload --port 8000
