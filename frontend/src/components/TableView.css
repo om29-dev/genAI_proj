@@ -1,0 +1,57 @@
+.table-view-container {
+  background-color: #fff;
+  overflow: auto;
+}
+
+.table th {
+  font-weight: 600;
+  white-space: nowrap;
+  background-color: #343a40;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-sm td,
+.table-sm th {
+  padding: 0.5rem 0.75rem;
+}
+
+.fst-italic {
+  font-style: italic !important;
+}
+
+.table-view-container.text-center {
+  max-height: none;
+  overflow-y: hidden;
+}
+
+.table-view-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-view-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.table-view-container::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 10px;
+}
+
+.table-view-container::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}

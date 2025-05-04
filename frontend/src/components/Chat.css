@@ -1,0 +1,168 @@
+.chat-window {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+  scroll-behavior: smooth;
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 10px;
+}
+
+.chat-window::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-message-wrapper {
+  align-items: flex-end;
+}
+
+.bot-message-wrapper {
+  align-items: flex-start;
+}
+
+.message-bubble {
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.user-bubble {
+  border-bottom-right-radius: 0.25rem !important;
+}
+
+.bot-bubble {
+  border-bottom-left-radius: 0.25rem !important;
+  border: 1px solid #dee2e6;
+  border-radius: 1.5rem !important;
+}
+
+.markdown-content {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+.markdown-content ul, .markdown-content ol {
+  padding-left: 1.5rem;
+}
+.chat-input-group {
+  display: flex !important;
+  align-items: stretch !important; /* Align items vertically */
+  /* position: relative; No longer needed here */
+}
+/* Wrapper for textarea and hint */
+.textarea-wrapper {
+  /* Takes up available space */
+}
+.chat-input-group textarea.form-control {
+  line-height: 1.5;
+  transition: padding-left 0.3s ease-in-out; /* Add transition for padding */
+  border-top-left-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+  border-top-right-radius: 0 !important; /* Changed */
+  border-bottom-right-radius: 0 !important; /* Changed */
+  border-right: none !important; /* Added to remove right border */
+}
+.chat-input-group textarea.form-control:focus {
+  box-shadow: none;
+  border-color: #86b7fe;
+}
+
+/* Style for textarea when hint is visible */
+.textarea-with-hint-overlay {
+  padding-right: 45px !important; /* Adjust padding as needed for right side */
+}
+
+/* SQL Command Hint Styles - Overlay */
+.sql-command-hint-overlay {
+  position: absolute;
+  right: 12px; /* Position from the right */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 3px 8px;
+  background-color: #e9ecef; /* Light grey background */
+  color: #6c757d; /* Grey text */
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  white-space: nowrap; /* Prevent wrapping */
+  pointer-events: auto; /* Make it clickable */
+  z-index: 2; /* Ensure it's above the textarea's placeholder */
+}
+
+.sql-command-hint-overlay.hidden {
+  opacity: 0;
+  pointer-events: none; /* Make it non-interactive when hidden */
+}
+
+/* Remove old hint styles if they exist */
+.sql-command-hint svg {
+  margin-right: 4px; /* Space between icon and text */
+}
+
+
+/* Keep focus style */
+.chat-input-group textarea.form-control:focus {
+  box-shadow: none;
+  border-color: #86b7fe;
+}
+.chat-input-group .btn-primary {
+  border-top-left-radius: 0 !important; /* Changed */
+  border-bottom-left-radius: 0 !important; /* Changed */
+  border-top-right-radius: 25px !important;
+  border-bottom-right-radius: 25px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  min-width: 45px;
+}
+/* Add some padding to the right of the send icon */
+.chat-input-group .btn-primary i.bi-send {
+  padding-right: 6px; /* Adjust this value if needed */
+}
+
+/* Remove styles specific to the old SQL button if any */
+.chat-input-group .btn-outline-danger {
+  border-radius: 25px !important; /* Added */
+  margin-left: 0.5rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.action-buttons-container .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-input-group .btn-outline-danger .clear-button-text {
+  display: none;
+}
+
+.chat-input-group .btn-outline-danger:hover .clear-button-text {
+  display: inline;
+}
